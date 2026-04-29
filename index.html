@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- 文字コードの指定　UTF-8を指定します -->
+    <meta charset="UTF-8" />
+    <!-- スマホやタブレットでもきれいに表示する「レスポンシブ表示」のための記述です -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- サイトのアイコンを設定します -->
+    <link
+      rel="shortcut icon"
+      href="ここにアイコン画像のタグを入れる"
+      type="image/x-icon"
+    />
+
+    <!-- OGP基本設定 -->
+    <meta property="og:title" content="サイトのタイトル" />
+    <meta
+      property="og:description"
+      content="サイトの説明文をここに書きます。"
+    />
+    <meta property="og:url" content="https://example.com/" />
+    <meta property="og:image" content="https://example.com/img/ogp.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="サイト名" />
+
+    <!-- Twitter用設定（任意だけどおすすめ） -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="サイトのタイトル" />
+    <meta name="twitter:description" content="サイトの説明文" />
+    <meta name="twitter:image" content="https://example.com/img/ogp.jpg" />
+
+    <!-- 検索にヒットしないようにするための記述です -->
+    <meta name="robots" content="noindex" />
+
+    <!-- サイトのタイトルを記述します -->
+    <title>ここにタイトル入れる</title>
+    <!-- サイトの概要を記述します -->
+    <meta name="description" content="ここにサイトの概要を記入します。" />
+
+    <!-- Google Fontsを読み込むための記述です。上２行はgoogle fontを使うための記述、３行目使用したいfontのURL -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Noto+Serif+JP:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&family=Kiwi+Maru:wght@500&family=Noto+Serif+JP:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kiwi+Maru:wght@500&family=Noto+Serif+JP:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- animate.cssを読み込むためのコード -->
+    <link rel="stylesheet" href="css/animate.css" />
+
+    <!--swiperを使用するためのコード  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <!-- スタイルシートの読み込みのための記述です ①reset.css ②本来のcss -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="header__inner sp-inner">
+        <h1 class="header__logo">
+          <a href="#"><img src="./img/icon/img_logo.png" alt="SnapOnomichi" /></a>
+        </h1>
+        <nav class="header_nav">
+          <ul class="header-lists">
+            <li class="header-list">
+              <a href="#about" class="header__link">キャンペーンについて</a>
+            </li>
+            <li class="header-list">
+              <a href="#prizes" class="header__link">特典</a>
+            </li>
+            <li class="header-list">
+              <a href="#spots" class="header__link">おすすめスポット</a>
+            </li>
+            <li class="header-list">
+              <a href="#qa" class="header__link">よくある質問</a>
+            </li>
+            <li class="header-list">
+              <a href="#entry" class="header__link">参加要項</a>
+            </li>
+          </ul>
+          <div class="header__button">
+            <a href="#contact" class="header__button button">応募してみる</a>
+          </div>
+        </nav>
+        <div id="js-drawer-icon" class="header__open drawer-icon">
+          <span class="drawer-icon__bar"></span>
+          <span class="drawer-icon__bar"></span>
+          <span class="drawer-icon__bar"></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- drawer________ -->
+    <ul class="drawer__contents-lists" id="js-drawer__contents-lists">
+      <li class="drawer__contents-list">
+        <a href="#about" class="drawer-contents__link">キャンペーンについて</a>
+      </li>
+      <li class="drawer__contents-list">
+        <a href="#prizes" class="drawer-contents__link">キャンペーン特典</a>
+      </li>
+      <li class="drawer__contents-list">
+        <a href="#spots" class="drawer-contents__link">おすすめスポット</a>
+      </li>
+      <li class="drawer__contents-list">
+        <a href="#qa" class="drawer-contents__link">よくある質問</a>
+      </li>
+      <li class="drawer__contents-list">
+        <a href="#entry" class="drawer-contents__link">参加事項</a>
+      </li>
+      <div class="drawer__contents-button">
+        <a href="#contact" class="drawer-button button">応募してみる</a>
+      </div>
+    </ul>
+
+    <!-- fv ____________________________________________-->
+    <div class="fv">
+      <picture class="fv__bg">
+        <source media="(min-width: 900px)" srcset="./img/bg/pc/fv__bg__pc.png" />
+        <img src="./img/bg/sp/fv__bg__sp.png" alt="" decoding="async" />
+      </picture>
+
+      <div class="fv__inner inner">
+        <div class="fv__content">
+          <div class="fv__lead">
+            <p class="fv__lead1">
+              あなたの見つけたレトロな尾道の一枚を
+              <br />
+              Instagramに投稿しよう
+            </p>
+          </div>
+          <div class="fv_main__text">
+            <div class="fv_main__text1">
+              <img src="./img/sp/fv_img_title.png" alt="＃見つけて尾道レトロ" />
+            </div>
+            <div class="fv_main__text2-wrap">
+              <img src="./img/sp/fv_img_title2.png" alt="キャンペーン" />
+            </div>
+          </div>
+        </div>
+
+        <!-- fvの装飾 -->
+        <div class="fv__decorations">
+          <picture class="fv__decor-balloon">
+            <source
+              media="(min-width: 768px)"
+              srcset="./img/pc/img_fukidashi-pc.png"
+            />
+            <img src="./img/icon/img_fukidashi.png" alt="" decoding="async" />
+          </picture>
+          <div class="fv__decor-present">
+            <img
+              src="./img/sp/img_present.png"
+              alt="尾道ギフトを100名様にプレゼント"
+            />
+          </div>
+
+          <picture class="fv__decor-phone">
+            <source media="(min-width: 800px)" srcset="./img/pc/fv_pc.png" />
+            <img
+              src="./img/sp/fv_sp.png"
+              alt="スマホ画像"
+              decoding="async"
+              width="500"
+              height="102"
+            />
+          </picture>
+
+          <div class="fv__decor-drink">
+            <img src="./img/sp/img_food.png" alt="" />
+          </div>
+          <div class="fv__image-cat1">
+            <img src="./img/sp/black-cat3.png" alt="" />
+          </div>
+          <div class="fv__image-cat2">
+            <img src="./img/sp/brown-cat4.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- about キャンペーンについて_________________________________________-->
+    <section class="about" id="about">
+      <!-- about　の装飾画像___________________ -->
+      <!-- レイヤー②：背景系 -->
+      <div class="about__decor-bg-footprint">
+        <img src="./img/bg/bg-footprint.png" alt="" width="100" height="200" />
+      </div>
+      <div class="about__decor-bg-right">
+        <picture>
+          <source srcset="./img/pc/photo_R.png" media="(min-width: 800px)" />
+          <img src="./img/sp/about_photo2.png" alt="" decoding="async" />
+        </picture>
+      </div>
+      <div class="about__decor-bg-left">
+        <picture>
+          <source media="(min-width: 800px)" />
+          <img src="./img/sp/about_photo1.png" alt="" decoding="async" />
+        </picture>
+      </div>
+      <div class="about__decor-bg-slide hidden-sp">
+        <img
+          src="./img/bg/斜めパターン.png"
+          alt=""
+          width="250"
+          height="250"
+        />
+      </div>
+      <picture class="about__decor-bg-steps">
+        <source srcset="./img/pc/坂道-pc.png" media="(min-width:900px)" />
+        <img src="./img/sp/坂道-sp.png" alt="" width="854" height="163"
+      /></picture>
+
+      <div class="about__decor-bg-goods1">
+        <img src="./img/icon/Goods=布.png" alt="" width="616" height="301" />
+      </div>
+      <div class="about__decor-bg-goods2">
+        <img src="./img/icon/Goods=ボタン.png" alt="" width="202" height="201" />
+      </div>
+      <div class="about__decor-bg-wave">
+        <img src="./img/bg/wave.png" alt="" width="874" height="45" />
+      </div>
+
+      <!-- ここからaboutのbody -->
+      <div class="about__inner inner">
+        <div class="about__top">
+          <!-- レイヤー①：headingの左右の写真 -->
+          <div class="about__decor-photo-left">
+            <img src="./img/sp/img_about_pic1.png" alt="" />
+          </div>
+          <div class="about__decor-photo-right">
+            <img src="./img/sp/img_about_pic2.png" alt="" />
+          </div>
+          <div class="about__content">
+            <div class="heading about__heading">
+              <div class="heading__icon">
+                <img src="./img/icon/Vector.png" alt="" />
+              </div>
+              <div class="heading__main-text_en">About</div>
+              <div class="heading__main-text_jp">キャンペーンについて</div>
+            </div>
+            <div class="about__sub-heading">
+              <div class="about__main-text__pc-only hidden-sp">
+                あなたの心が動いた尾道の瞬間を、<br class="hidden-pc" />
+                ＼ おしえてください！ ／
+              </div>
+              <div class="about__main-text__sp-only hidden-pc">
+                あなたの心が動いた尾道の瞬間を<br />
+                ＼ おしえてください！ ／
+              </div>
+            </div>
+
+            <div class="about__sub-text">
+              <p class="about__paragraph">
+                風情あふれる坂道に、静かに佇むお寺。<br />
+                路地裏の角をまがれば<br class="hidden-pc" />
+                気ままにお昼寝する猫に出会え、<br />
+                ふと振り返れば、美しい瀬戸内の海が。<br />
+              </p>
+              <p class="about__paragraph">
+                数々の映画の舞台にもなってきたこの街には<br
+                  class="hidden-pc"
+                />心がほどけるような、<br class="hidden-pc" />
+                レトロでやさしい風景が広がっています。<br />
+              </p>
+              <p class="about__paragraph">
+                あなたの見つけた尾道のなつかしい景色を、<br />
+                ぜひおしえてください。<br class="hidden-pc" />
+              </p>
+              <p class="about__paragraph">
+                尾道観光部（<a href="" class="text-link">@onomichi_retro</a
+                >）を<br class="hidden-pc" />
+                フォロー&<br class="hidden-sp" />尾道で撮影した写真を、<br
+                  class="hidden-pc"
+                />
+                ハッシュタグ「
+                <span class="font-bold">#見つけて尾道レトロ</span>」を<br
+                  class="hidden-pc"
+                /><br
+                  class="hidden-sp"
+                />つけてInstagramに投稿いただいた方の中から<br
+                  class="hidden-pc"
+                />
+              </p>
+            </div>
+            <div class="about__highlight">
+              尾道のギフトを100名様にプレゼント！
+            </div>
+            <button class="about__button button">参加の仕方はこちら</button>
+          </div>
+        </div>
+      </div>
+      <!-- 装飾画像の余白とロゴ -->
+      <div class="about__bottom">
+        <div class="about__bottom-logo">
+          <picture>
+            <source media="(min-width: 768px)" srcset="" />
+            <img src="./img/sp/ONOMICHI_sp.svg" alt="" decoding="async" />
+          </picture>
+        </div>
+      </div>
+    </section>
+    <!-- ここにswiperを入れる -->
+    <section class="gallery">
+      <div class="gallery__inner">
+        <div class="gallery__swiper swiper" id="js-gallery-swiper">
+          <div class="swiper-wrapper">
+            <div class="gallery__swiper-slide swiper-slide">
+              <img src="./img/sp/gallary_swiper/img_about_scroll1.png" alt="" />
+            </div>
+            <div class="gallery__swiper-slide swiper-slide">
+              <img src="./img/sp/gallary_swiper/img_about_scroll2.png" alt="" />
+            </div>
+            <div class="gallery__swiper-slide swiper-slide">
+              <img src="./img/sp/gallary_swiper/img_about_scroll3.png" alt="" />
+            </div>
+            <div class="gallery__swiper-slide swiper-slide">
+              <img src="./img/sp/gallary_swiper/img_about_scroll4.png" alt="" />
+            </div>
+            <div class="gallery__swiper-slide swiper-slide">
+              <img src="./img/sp/gallary_swiper/img_about_scroll5.png" alt="" />
+            </div>
+            <div class="gallery__swiper-slide swiper-slide">
+              <img src="./img/sp/gallary_swiper/img_about_scroll6.png" alt="" />
+            </div>
+            <div class="gallery__swiper-slide swiper-slide">
+              <img src="./img/sp/gallary_swiper/img_about_scroll7.png" alt="" />
+            </div>
+            <div class="gallery__swiper-slide swiper-slide">
+              <img src="./img/sp/gallary_swiper/img_about_scroll8.png" alt="" />
+            </div>
+            <div class="gallery__swiper-slide swiper-slide">
+              <img src="./img/sp/gallary_swiper/img_about_scroll9.png" alt="" />
+            </div>
+            <div class="gallery__swiper-slide swiper-slide">
+              <img
+                src="./img/sp/gallary_swiper/img_about_scroll10.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Enter 応募の仕方__________________________________ -->
+    <section class="how-to-enter">
+      <!-- how-to-enterの装飾画像 -->
+      <div class="how-to-enter__decoration-map">
+        <img src="./img/sp/onomichi-map.png" alt="" />
+      </div>
+      <div class="how-to-enter__decoration-right-wrapper">
+        <div class="how-to-enter__decoration-right">
+          <div class="how-to-enter__decoration-cat-b">
+            <img src="./img/sp/how-to-browncat.png" alt="" />
+          </div>
+          <div class="how-to-enter__decoration-cat-a">
+            <img src="./img/sp/how-to-graycat.png" alt="" />
+          </div>
+          <div class="how-to-enter__decoration-footprints-right1">
+            <img src="./img/bg/sp/img_bg_how-to_right_pawpads.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="how-to-enter__decoration-footprints-left1">
+        <img
+          src="./img/sp/how-to-enter__decoration-footprints-left1.png"
+          alt=""
+        />
+      </div>
+
+      <div class="how-to-enter__decoration-footprints-right2">
+        <img src="./img/bg/sp/img_bg_how-to_right_pawpads.png" alt="" />
+      </div>
+
+      <!-- ここからhow-to-enter の body-->
+      <div class="how-to-enter__inner sp-inner">
+        <div class="heading">
+          <div class="heading__icon">
+            <img src="./img/icon/Icon=camera.png" alt="" />
+          </div>
+          <div class="heading__main-text_en">How to Enter</div>
+          <div class="heading__main-text_jp">応募の仕方</div>
+        </div>
+        <div class="how-to-enter__steps">
+          <div class="how-to-enter__step">
+            <div class="how-to-enter__box">
+              <div class="how-to-enter-img">
+                <img src="./img/sp/step1_sp.png" alt="step1" />
+              </div>
+              <div class="step-box__main-text">アカウントをフォロー</div>
+              <div class="step-box__sub-text">
+                Instagramアプリをダウンロードして、<br />
+                公式アカウント尾道観光部(<a href=" " class="text-link"
+                  >@onomichi_retro</a
+                >)の<br />
+                Instagramのアカウントをフォローしてにゃん。
+              </div>
+
+              <a href="" class="how-to-enter__jmp">
+                <img
+                  src="./img/icon/Icon=instagram.png"
+                  alt="instagram-icon"
+                  class="how-to-enter__jmp-img"
+                />
+                <span class="how-to-enter__jmp-text"
+                  >onomichi_tabi をフォロー</span
+                >
+              </a>
+            </div>
+            <div class="how-to-enter___gap">
+              <img src="./img/sp/step_SP.png" alt="たて波線" />
+            </div>
+            <div class="how-to-enter___gap-pc hidden-sp">
+              <img src="./img/icon/Vector 4 (Stroke).png" alt="" />
+            </div>
+            <div class="how-to-enter__box how-to-enter__box-2">
+              <div class="how-to-enter-img">
+                <img src="./img/sp/step2_sp.png" alt="step2" />
+              </div>
+              <div class="step-box__main-text">尾道で撮影</div>
+              <div class="step-box__sub-text">
+                尾道の旅で「レトロ」を感じられる
+                <br />写真を撮影してほしいんだにゃ。<br />
+                美しい景色、愛らしい猫、美味しい食べ物や<br />
+                可愛いお土産など、なんでもOK！
+              </div>
+            </div>
+            <div class="how-to-enter___gap">
+              <img src="./img/sp/step_SP.png" alt="たて波線" />
+            </div>
+            <div class="how-to-enter___gap-pc-2 hidden-sp">
+              <img src="./img/icon/Vector 4 (Stroke).png" alt="" />
+            </div>
+            <div class="how-to-enter__box">
+              <div class="how-to-enter-img">
+                <img src="./img/sp/step3_sp.png" alt="step3" />
+              </div>
+              <div class="step-box__main-text">ハッシュタグをつけて投稿！</div>
+              <div class="step-box__sub-text">
+                ハッシュタグ<span class="step-box__sub-text-2"
+                  >「＃見つけて尾道レトロ」</span
+                >
+                を<br class="" />必ずつけて投稿してにゃん！
+                <br class="" />投稿して頂いた方の中から<br class="" />
+                100名様に尾道の豪華な商品をプレゼント！
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="how-to-enter__button button">
+          #見つけて尾道レトロ の最新投稿を見る
+        </button>
+      </div>
+    </section>
+
+    <!-- Prizes   キャンペーン特典___________________________ -->
+    <section class="prizes" id="prizes">
+      <!-- ここからprizesのbody -->
+      <div class="prizes__content">
+        <div class="prizes__inner sp-inner">
+          <div class="prize__heading heading">
+            <div class="prize__heading__icon heading__icon">
+              <img src="./img/icon/Icon=gifts.png" alt="" />
+            </div>
+            <div class="heading__main-text_en">Prizes</div>
+            <div class="heading__main-text_jp">キャンペーン特典</div>
+          </div>
+          <div class="prizes-text">
+            キャンペーンにご参加いただたい方の中から100名様に、尾道で人気のお土産セットやオリジナルグッズをプレゼント！
+          </div>
+          <div class="prizes__boxes">
+            <div class="prize__box" data-modal="1">
+              <div class="prize-box__head-number">
+                <img src="./img/icon/img_prizes_icon.png" alt="特典１" />
+              </div>
+              <div class="prize-box__body">
+                <picture class="prize-box__image">
+                  <source media="(min-width: 900px)" srcset="" />
+                  <img
+                    src="./img/sp/prizes/img_prizes1.png"
+                    alt=""
+                    decoding="async"
+                  />
+                </picture>
+
+                <div class="prize-box-text__body">
+                  海街洋菓子店<br />スイーツセット
+                </div>
+              </div>
+            </div>
+            <div class="prize__box" data-modal="2">
+              <div class="prize-box__head-number">
+                <img src="./img/icon/img_prizes_icon2.png" alt="特典2" />
+              </div>
+              <div class="prize-box__body">
+                <picture class="prize-box__image">
+                  <source media="(min-width: 900px)" srcset="" />
+                  <img
+                    src="./img/sp/prizes/img_prizes2.png"
+                    alt=""
+                    decoding="async"
+                  />
+                </picture>
+
+                <div class="prize-box-text__body">
+                  ねこねこ<br class="hidden-pc" />グッズセット
+                </div>
+              </div>
+            </div>
+            <div class="prize__box" data-modal="3">
+              <div class="prize-box__head-number">
+                <img src="./img/icon/img_prizes_icon3.png" alt="特典3" />
+              </div>
+              <div class="prize-box__body">
+                <picture class="prize-box__image">
+                  <source media="(min-width: 900px)" srcset="" />
+                  <img
+                    src="./img/sp/prizes/img_prizes3.png"
+                    alt=""
+                    decoding="async"
+                  />
+                </picture>
+
+                <div class="prize-box-text__body">尾道ラーメンセット</div>
+              </div>
+            </div>
+            <div class="prize__box" data-modal="4">
+              <div class="prize-box__head-number">
+                <img src="./img/icon/img_prizes_icon4.png" alt="特典4" />
+              </div>
+              <div class="prize-box__body">
+                <picture class="prize-box__image">
+                  <source media="(min-width: 900px)" srcset="" />
+                  <img
+                    src="./img/sp/prizes/img_prizes4.png"
+                    alt=""
+                    decoding="async"
+                  />
+                </picture>
+
+                <div class="prize-box-text__body">
+                  おうちで<br />喫茶店セット
+                </div>
+              </div>
+            </div>
+            <div class="prize__box prize__box_sp-last" id="js-prize__box-5">
+              <div class="prize-box__head-number">
+                <img src="./img/icon/img_prizes_icon5.png" alt="特典5" />
+              </div>
+              <div class="prize-box__body">
+                <picture class="prize-box__image">
+                  <source media="(min-width: 900px)" srcset="" />
+                  <img
+                    src="./img/sp/prizes/img_prizes5.png"
+                    alt=""
+                    decoding="async"
+                  />
+                </picture>
+
+                <div class="prize-box-text__body">
+                  工房尾道帆布<br />オリジナルトート
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="prize-button">
+            <button class="prizes__button button">
+              #見つけて尾道レトロ の最新投稿を見る
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- うっすら画像がここに入るよ -->
+    </section>
+    <div class="prizes__background-images">
+      <div class="prizes__background-image-wrapper">
+        <picture class="prizes__background-image">
+          <!-- <source
+            srcset="./img/bg/pc/img_prizes_bg.png"
+            media="(min-width: 768px)"
+          />
+          <img src="./img/bg/sp/bg_pic.png" alt="" decoding="async" /> -->
+        </picture>
+      </div>
+    </div>
+    <!--Prizesのモーダル  -->
+    <dialog class="js-prizes-modal" id="js-prizes-modal-1">
+      <img src="./img/sp/prizes/modal1.png" alt="" width="" height="" />
+      <div class="modal__inner">
+        <h4 class="modal__heading">海街洋菓子店 スイーツセット</h4>
+        <div class="modal__text">
+          海沿いにあるケーキ屋さん、<br />
+          海街洋菓子店の人気焼き菓子詰め合わせセット。<br />
+          こだわりのバターをふんだんに使ったリッチな味わいで、濃厚なコクが後を引く美味しさです。
+        </div>
+        <button class="modal__button button js-modal-close">閉じる</button>
+      </div>
+    </dialog>
+
+    <dialog class="js-prizes-modal" id="js-prizes-modal-2">
+      <img src="./img/sp/prizes/modal2.png" alt="" width="" height="" />
+      <div class="modal__inner">
+        <h4 class="modal__heading">ねこねこグッズセット</h4>
+        <div class="modal__text">
+          お土産としても大人気の猫グッズを集めました。<br />
+          お家で、オフィスで、<br />
+          眺めているだけでも癒されてしまう<br />
+          愛らしい猫たちと一緒に。
+        </div>
+        <button class="modal__button button js-modal-close">閉じる</button>
+      </div>
+    </dialog>
+
+    <dialog class="js-prizes-modal" id="js-prizes-modal-3">
+      <img src="./img/sp/prizes/modal3.png" alt="" width="" height="" />
+      <div class="modal__inner">
+        <h4 class="modal__heading">尾道ラーメンセット</h4>
+        <div class="modal__text">
+          全国にファンがいる本格的な尾道ラーメンをお家で。<br />
+          尾道ラーメンといえば、透き通った醤油スープと、
+          <br />平打ち麺が特徴です。<br />
+          コクがありながらまろやかな味のスープは
+          <br />思わず飲み干したくなるお味。
+        </div>
+        <button class="modal__button button js-modal-close">閉じる</button>
+      </div>
+    </dialog>
+
+    <dialog class="js-prizes-modal" id="js-prizes-modal-4">
+      <img src="./img/sp/prizes/modal4.png" alt="" width="" height="" />
+      <div class="modal__inner">
+        <h4 class="modal__heading">おうちで喫茶店セット</h4>
+        <div class="modal__text">
+          尾道の人気喫茶店のコーヒー豆を使用したドリップ<br />
+          バッグとマグカップのセット。<br />
+          香り高い深煎りの豆は、カフェオレにするのも◎<br />
+          カンタンに楽しめるドリップバッグは、<br />
+          オフィスや在宅ワーク時、忙しい家事の合間など<br />
+          日常のさまざまなシーンで大活躍。
+        </div>
+        <button class="modal__button button js-modal-close">閉じる</button>
+      </div>
+    </dialog>
+
+    <dialog class="js-prizes-modal" id="js-prizes-modal-5">
+      <img src="./img/sp/prizes/modal5.png" alt="" width="" height="" />
+      <div class="modal__inner">
+        <h4 class="modal__heading">工房尾道帆布オリジナルトート</h4>
+        <div class="modal__text">
+          工房尾道帆布とコラボした、<br />
+          本キャンペーンオリジナルトート。<br />
+          シンプルなデザインで、シーンを選ばず<br />
+          お使いいただけます。<br />
+          しっかりした生地で、<br />
+          年月とともに変化していく風合いも魅力。
+        </div>
+        <button class="modal__button button js-modal-close">閉じる</button>
+      </div>
+    </dialog>
+    <script>
+      (() => {
+        const modal = document.getElementById("js-prizes-modal-5");
+        const openBtn = document.getElementById("js-prize__box-5");
+        const closeBtn = modal.querySelector(".js-modal-close");
+
+        // 開く
+        openBtn.addEventListener("click", () => {
+          modal.showModal();
+        });
+
+        // 閉じる（ボタン）
+        closeBtn.addEventListener("click", () => {
+          modal.close();
+        });
+
+        // 背景クリックで閉じる
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) {
+            modal.close();
+          }
+        });
+      })();
+    </script>
+
+    <!--spots おすすめスポット________________________ -->
+    <section class="spots" id="spots">
+      <div class="spots__inner">
+        <div class="spots__main-text">
+          <img
+            src="./img/icon/material-symbols--star-rounded.svg"
+            alt=""
+          />おすすめスポット
+        </div>
+        <div class="spots__slider">
+          <!-- Slider main container -->
+          <div id="js-spots-swiper" class="swiper spots__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="spots__swiper-slide swiper-slide">
+                <article class="spots-card">
+                  <div class="spots-card__image">
+                    <img
+                      src="./img/sp/spots/spots_img1.png"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="spots-card__text-body">
+                    <h3 class="spots-card__main-text">天寧寺　海雲塔</h3>
+                    <p class="spots-card__text">
+                      尾道のシンボルともいえる三重の塔。海雲塔ごしに見える坂と海のパノラマは、まさに絶景そのもの。
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div class="spots__swiper-slide swiper-slide">
+                <article class="spots-card">
+                  <div class="spots-card__image">
+                    <img
+                      src="./img/sp/spots/spots_img2.png"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="spots-card__text-body">
+                    <h3 class="spots-card__main-text">猫の細道</h3>
+                    <p class="spots-card__text">
+                      尾道名物といえば、やっぱり猫！猫たちが集まりやすいスポットとして有名な猫の細道は、神社の手前からお寺までおよそ200メートル続きます。あちこちに飾られた猫のアートを見るのも楽しいですよ。
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div class="spots__swiper-slide swiper-slide">
+                <article class="spots-card">
+                  <div class="spots-card__image">
+                    <img
+                      src="./img/sp/spots/spots_img3.png"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="spots-card__text-body">
+                    <h3 class="spots-card__main-text">本通商店街</h3>
+                    <p class="spots-card__text">
+                      東西にのびる通りには、個性豊かなお店が並びます。尾道ならではのお土産探しにもぴったりのエリアです。風情あふれる通りを歩きながら、自分だけの宝物探しにでかけましょう！
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div class="spots__swiper-slide swiper-slide">
+                <article class="spots-card">
+                  <div class="spots-card__image">
+                    <img
+                      src="./img/sp/spots/spots_img4.png"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="spots-card__text-body">
+                    <h3 class="spots-card__main-text">工房尾道帆布</h3>
+                    <p class="spots-card__text">
+                      向島産の帆布を使ったバッグや小物がそろうお店。ポケット追加などのオーダー（有料）も可能です。店内には、帆布の織機も展示してあります。旅の相棒になるバッグを探してみるのもいいかも！
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div class="spots__swiper-slide swiper-slide">
+                <article class="spots-card">
+                  <div class="spots-card__image">
+                    <img
+                      src="./img/sp/spots/spots_img5.png"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="spots-card__text-body">
+                    <h3 class="spots-card__main-text">ゆーゆー</h3>
+                    <p class="spots-card__text">
+                      約100年続いた銭湯を改装したユニークなカフェ。のれんの向こうには、脱衣ロッカーやタイル張りの壁が残っており、当時のおもかげを色濃く感じることができます。地元産のジュースや調味料なども扱っており、お土産にもぴったり。
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div class="spots__swiper-slide swiper-slide">
+                <article class="spots-card">
+                  <div class="spots-card__image">
+                    <img
+                      src="./img/sp/spots/spots_img6.png"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="spots-card__text-body">
+                    <h3 class="spots-card__main-text">AIRSHIP COFFEE</h3>
+                    <p class="spots-card__text">
+                      元航海士のコーヒー専門家が営むカフェ。大のコーヒー好きであるオーナー自身が、古民家を再生して開いたお店です。こだわりの詰まったコーヒーは、コーヒー通も唸るおいしさ。テイクアウトして海辺で飲むのもおすすめ！
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div class="spots__swiper-slide swiper-slide">
+                <article class="spots-card">
+                  <div class="spots-card__image">
+                    <img
+                      src="./img/sp/spots/spots_img7.png"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="spots-card__text-body">
+                    <h3 class="spots-card__main-text">
+                      日暮亭（ひぐらしてい）
+                    </h3>
+                    <p class="spots-card__text">
+                      築百年のお家をリノベーションし、畳や梁が建築当時のまま残る喫茶店。和のスイーツが楽しめます。人気メニューはみたらしパフェ。
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="spots__bottom">
+        <div class="spot__background-image">
+          <img src="./img/bg/sp/img_bg_spots.png" alt="SPOTS" />
+        </div>
+        <div class="spots__bottom-wrapper">
+          <p class="spot__background-image__sub-text">
+            レトロな景色に出会える人気の撮影スポットをピックアップ！
+          </p>
+          <button class="spots__button button">
+            #見つけて尾道レトロ の最新投稿を見る
+          </button>
+        </div>
+      </div>
+      <!-- navigation buttons -->
+      <div id="js-spots-prev" class="spots__prev hidden-sp">
+        <img src="./img/icon/swiper_button.L.png" alt="前へ" />
+      </div>
+
+      <div id="js-spots-next" class="spots__next hidden-sp">
+        <img src="./img/icon/swiper_button.R.png" alt="次へ" />
+      </div>
+    </section>
+
+    <!-- Q&A_____________________________________ -->
+    <section class="qa" id="qa">
+      <div class="qa__inner">
+        <div class="heading">
+          <div class="heading__icon">
+            <img src="./img/icon/Icon=fukidashi.png" alt="" />
+          </div>
+          <div class="heading__main-text_en">Q&A</div>
+          <div class="heading__main-text_jp">よくあるご質問</div>
+        </div>
+
+        <div class="qa__boxes">
+          <div class="qa__box qa-box is-open">
+            <button type="button" class="qa-box__head js-accordion">
+              <div class="qa-box__head-icon">
+                <img src="./img/icon/Q.png" alt="Q" />
+              </div>
+              <span class="qa-box__head-text"
+                >ひとりで複数回投稿してもいいですか？</span
+              >
+              <div class="qa-box__head-check-icon"></div>
+            </button>
+            <div class="qa-box__body" style="display: block">
+              <div class="qa-box__a">
+                <div class="qa-box__a-icon">
+                  <img src="./img/icon/A.png" alt="A" />
+                </div>
+                <span class="qa-box__a-text"
+                  >期間中であれば何度でも投稿可能ですが、当選は１回限りとなります。</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="qa__box qa-box">
+            <button type="button" class="qa-box__head js-accordion">
+              <div class="qa-box__head-icon">
+                <img src="./img/icon/Q.png" alt="Q" />
+              </div>
+              <span class="qa-box__head-text"
+                >過去の尾道旅行の写真でもいいですか？</span
+              >
+              <div class="qa-box__head-check-icon"></div>
+            </button>
+            <div class="qa-box__body">
+              <div class="qa-box__a">
+                <div class="qa-box__a-icon">
+                  <img src="./img/icon/A.png" alt="A" />
+                </div>
+                <span class="qa-box__a-text"
+                  >キャンペーン以前の期間に撮影した写真での参加も可能です。ただし、過去のInstagramに投稿済みのものに編集で「<a
+                    href=""
+                    target="_blank"
+                    class="text-link"
+                    >#見つけて尾道レトロ</a
+                  >」を追加されてもシステム上反映することはできません。ご注意ください。</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="qa__box qa-box">
+            <button type="button" class="qa-box__head js-accordion">
+              <div class="qa-box__head-icon">
+                <img src="./img/icon/Q.png" alt="Q" />
+              </div>
+              <span class="qa-box__head-text"
+                >お店の中で写真を撮ってもいいですか？</span
+              >
+              <div class="qa-box__head-check-icon"></div>
+            </button>
+            <div class="qa-box__body">
+              <div class="qa-box__a">
+                <div class="qa-box__a-icon">
+                  <img src="./img/icon/A.png" alt="A" />
+                </div>
+                <span class="qa-box__a-text"
+                  >店内で撮影した写真での参加も可能ですが、他人のプライバシーを侵害する写真によるご応募は無効です。店内撮影の際は、必ずお店の人へご確認ください。</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="qa__box qa-box">
+            <button type="button" class="qa-box__head js-accordion">
+              <div class="qa-box__head-icon">
+                <img src="./img/icon/Q.png" alt="Q" />
+              </div>
+              <span class="qa-box__head-text"
+                >当選したらプレゼントは選べますか？</span
+              >
+              <div class="qa-box__head-check-icon"></div>
+            </button>
+            <div class="qa-box__body">
+              <div class="qa-box__a">
+                <div class="qa-box__a-icon">
+                  <img src="./img/icon/A.png" alt="A" />
+                </div>
+                <span class="qa-box__a-text"
+                  >恐れ入りますが、プレゼントをお選びいただくことはできません。また、ご当選者の発表は当選者の方への連絡をもって代えさせていただきます。</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 参加事項＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ -->
+    <section class="entry inner" id="entry">
+      <div class="entry__inner">
+        <div class="heading entry__heading">
+          <div class="heading__icon">
+            <img src="./img/icon/entry/img_prizes_icon.png" alt="" />
+          </div>
+          <div class="heading__main-text_en">Entry Requirements</div>
+          <div class="heading__main-text_jp">参加要項</div>
+        </div>
+
+        <div class="entry__contents">
+          <div class="entry__content">
+            <div class="entry__content__main-text">キャンペーン名</div>
+            <p class="entry__content__sub-text">
+              #見つけて尾道レトロキャンペーン
+            </p>
+          </div>
+          <div class="entry__content">
+            <div class="entry__content__main-text">応募期間</div>
+            <p class="entry__content__sub-text">2022/8/1(月)〜2022/9/30(金)</p>
+          </div>
+          <div class="entry__content">
+            <div class="entry__content__main-text">内容</div>
+            <p class="entry__content__sub-text">
+              尾道観光部（<a href="" class="text-link">@onomichi_retro</a
+              >）をフォロー&尾道で撮影した写真を、ハッシュタグ「#見つけて尾道レトロ」をつけてInstagramに投稿いただいた方の中から100名様に尾道のギフトセットやオリジナルグッズをプレゼント！
+            </p>
+          </div>
+          <div class="entry__content">
+            <div class="entry__content__main-text">対象のお客様</div>
+            <p class="entry__content__sub-text">
+              日本国内在住で、公式アカウント（<a href="" class="text-link"
+                >@onomichi_retro</a
+              >）をフォローのうえ、ハッシュタグをつけて応募された方
+            </p>
+          </div>
+          <div class="entry__content">
+            <div class="entry__content__main-text">注意事項</div>
+
+            <ul class="entry__notes">
+              <li>
+                当選のご連絡はInstagramダイレクトメールで行いますので、公式アカウント（<a
+                  href=""
+                  class="text-link"
+                  >@jtb_nihonnoshun</a
+                >）を必ずフォローしてください。
+              </li>
+              <li>
+                Instagramの投稿を「非公開」設定にされている場合は、本キャンペーンの応募対象外になりますのでご注意ください。
+              </li>
+              <li>
+                ご本人が撮影した写真が対象です。他人の著作権を侵害する写真、公序良俗に反する写真、
+                他人のプライバシーを侵害する写真によるご応募は無効です。
+              </li>
+              <li>
+                指定のハッシュタグをつけて画像を投稿した時点で肖像権や著作権、その他一切の関連する権利（以下、「肖像権等」といいます）に対する了承がとれているものと見なします。投稿写真内で確認できる対象物によって肖像権等の第三者の権利侵害があった場合、当社は一切責任を負いません。
+              </li>
+              <li>
+                投稿された写真は<a href="" class="text-link">@onomichi_retro</a>
+                にリポスト掲載する場合もあります。
+              </li>
+              <li>発表は当選者の方への連絡をもって代えさせていただきます。</li>
+              <li>ご応募は日本国内在住の方に限ります。</li>
+              <li>
+                ご送信いただいた個人情報は当社が当選者への賞品の発送、本キャンペーンに関する諸連絡に利用するほか、商品やサービスの参考とするために個人を特定しない統計情報の形で利用させていただきます。
+              </li>
+              <li>
+                応募者または当選者の個人情報は当社が管理します。応募者または当選者の個人情報を応募者または当選者の同意なしに業務委託先以外の第三者に開示・提供することはありません。（法令等により開示を求められた場合を除く）なお、ご送信いただいた個人情報は当社の個人情報保護方針に基づき安全かつ適切に管理いたします。詳しくは当社ホームページにて、
+                <a href="" target="_blank" class="text-link"
+                  >プライバシーポリシー</a
+                >をご確認ください。
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 町並み画像＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ -->
+    <div class="contact-visual"></div>
+    <!-- contact＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ -->
+    <section class="contact" id="contact">
+      <div class="contact__inner">
+        <div class="heading">
+          <div class="heading__icon">
+            <img src="./img/icon/Icon=mail.png" alt="" />
+          </div>
+          <div class="heading__main-text_en">Contact</div>
+          <div class="heading__main-text_jp">お問い合わせ</div>
+        </div>
+
+        <p class="contact__text">
+          本キャンペーンに関するお問い合わせは
+          <br class="hidden-pc" />以下のフォームからお願いします。
+        </p>
+        <form class="contact__form" id="js-contact-form" novalidate>
+          <div class="contact__fields">
+            <div class="form-field">
+              <div class="form-field__head">
+                <label for="your-name" class="form-field__label">お名前</label>
+                <span class="form-field__tag is-required">必須</span>
+              </div>
+              <div class="form-field__item">
+                <input
+                  class="form-text"
+                  type="text"
+                  name="your-name"
+                  id="your-name"
+                  placeholder="山田太郎"
+                  required
+                />
+              </div>
+              <!-- 
+              <p class="form-field__error"></p> -->
+            </div>
+            <div class="contact__field">
+              <div class="form-field">
+                <div class="form-field__head">
+                  <label for="your-email" class="form-field__label"
+                    >メールアドレス</label
+                  >
+                  <span class="form-field__tag is-required">必須</span>
+                </div>
+                <div class="form-field__item">
+                  <input
+                    class="form-text"
+                    type="email"
+                    name="your-email"
+                    id="your-email"
+                    placeholder="info@example.com"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="contact__field">
+              <div class="form-field">
+                <div class="form-field__head">
+                  <label for="your-age" class="form-field__label"
+                    >お問い合わせ内容</label
+                  >
+                  <span class="form-field__tag is-required">必須</span>
+                </div>
+                <div class="form-field__item">
+                  <select
+                    name="your-age"
+                    id="your-age"
+                    class="form-select"
+                    required
+                  >
+                    <option value="" disabled selected>選択してください</option>
+                    <option value="">選択してください1</option>
+                    <option value="">選択してください2</option>
+                    <option value="">選択してください3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="contact__field">
+              <div class="form-field">
+                <div class="form-field__head">
+                  <div class="form-field__label">メールマガジン</div>
+                </div>
+                <div class="form-field__item">
+                  <div class="form-field__radios">
+                    <label class="form-field__radio form-radio">
+                      <input
+                        class="form-radio__input"
+                        type="radio"
+                        name="magazine"
+                        value="yes"
+                      />
+                      <span class="form-radio-text">希望する</span>
+                    </label>
+                    <label class="form-field__radio form-radio">
+                      <input
+                        class="form-radio__input"
+                        type="radio"
+                        name="magazine"
+                        value="no"
+                      />
+                      <span class="form-radio-text">希望しない</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contact__field">
+              <div class="form-field">
+                <div class="form-field__head">
+                  <label for="your-message" class="form-field__label"
+                    >メッセージ</label
+                  >
+                  <span class="form-field__tag is-required">必須</span>
+                </div>
+                <div class="form-field__item">
+                  <textarea
+                    class="form-textarea"
+                    name="your-message"
+                    id="your-message"
+                    placeholder="このキャンペーンに関するお問い合わせがある方は、こちらにご相談内容をご入力ください。3営業日以内にご返信いたします。"
+                    required
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="form-field contact__privacy">
+              <label class="form-checkbox">
+                <input
+                  type="checkbox"
+                  name="your-privacy"
+                  class="form-checkbox__input"
+                  required
+                />
+                <span class="form-checkbox__text">
+                  <a href="" target="_blank" class="text-link"
+                    >プライバシーポリシー</a
+                  >に合意する</span
+                >
+              </label>
+            </div>
+            <div class="contact__button">
+              <input
+                type="submit"
+                value="上記の内容を送信する"
+                class="button"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- footer______________________________ -->
+    <footer class="footer">
+      <div class="footer__inner inner">
+        <!-- SNS -->
+        <div class="footer__sns">
+          <p class="footer__sns-text">\ Please Follow Us! /</p>
+          <ul class="footer__sns-items">
+            <li class="footer__sns-item">
+              <a href="#" aria-label="YouTube">
+                <img src="./img/icon/youtube-icon.png" alt="" />
+              </a>
+            </li>
+            <li class="footer__sns-item">
+              <a href="#" aria-label="Instagram">
+                <img src="./img/icon/instagram-icon.png" alt="" />
+              </a>
+            </li>
+            <li class="footer__sns-item">
+              <a href="#" aria-label="Twitter">
+                <img src="./img/icon/twitter-icon.png" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Access -->
+        <div class="footer__access-box">
+          <div class="footer__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d35889.87922527523!2d133.20695410518576!3d34.41170996254911!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355101ae25445039%3A0xa7f60624966b8290!2z44CSNzIyLTAwNDUg5bqD5bO255yM5bC-6YGT5biC5LmF5L-d77yR5LiB55uu!5e0!3m2!1sja!2sjp!4v1771143768670!5m2!1sja!2sjp"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+          <dl class="footer__access-list">
+            <div class="footer__logo">
+              <img src="./img/icon/img_logo.png" alt="SnapOnomichi" />
+            </div>
+            <div class="footer__access-item">
+              <dt>運営者</dt>
+              <dd>観光キャンペーン運営事務局</dd>
+            </div>
+            <div class="footer__access-item">
+              <dt>住所</dt>
+              <dd>広島県尾道市久保1丁目○−○</dd>
+            </div>
+            <div class="footer__access-item">
+              <dt>営業時間</dt>
+              <dd>平日9:00-17:00（土・日・祝は休み）</dd>
+            </div>
+            <div class="footer__access-item">
+              <dt>電話番号</dt>
+              <dd>000-0000-0000</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </footer>
+
+    <!-- page top -->
+    <a
+      href="#"
+      class="pagetop hidden-sp"
+      id="js-pagetop"
+      aria-label="ページトップへ"
+      ><img src="./img/icon/footer/img_pagetop.png" alt=""
+    /></a>
+    <div class="pagetopsp hidden-pc">
+      <a
+        href="#"
+        class="pagetop-sp hidden-pc"
+        id="js-pagetop-sp"
+        aria-label="ページトップへ"
+        ><img src="./img/icon/footer/img_pagetop.png" alt=""
+      /></a>
+    </div>
+
+    <!--copyright -->
+    <small class="footer__copyright">
+      Copyright © Tourism campaign management office.
+    </small>
+
+    <!-- swiperをjQueryで読み込むためのコード -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- wow.min.jsを読み込んでから、初期設定しておく -->
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <!-- jQueryを読み込むためのコード javascriptよりも先に定義する　/body>の直前に入力する-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!--javascriptを読み込むためのコード  -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
